@@ -39,7 +39,7 @@ def call(Map config = [:]) {
             fi
             
             # Check for changes
-            if #git diff --quiet; then
+            #if #git diff --quiet; then
                 #echo "No changes to commit"
             #else
                 # Commit and push changes
@@ -49,7 +49,7 @@ def call(Map config = [:]) {
                 # Set up credentials for push
                 git remote set-url origin https://\${GIT_USERNAME}:\${GIT_PASSWORD}@github.com/Pruthviraj0077/tws-e-commerce-app.git
                 git push origin HEAD:\${GIT_BRANCH}
-            fi
+            #fi
         """
     }
 }
