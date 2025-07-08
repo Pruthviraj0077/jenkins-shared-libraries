@@ -40,8 +40,8 @@ def call(Map config = [:]) {
             
             # Check for changes
             if git diff --quiet; then
-                echo "No changes to commit"
-            #else
+                #echo "No changes to commit"
+            else
                 # Commit and push changes
                 git add ${manifestsPath}/*.yaml
                 git commit -m "Update image tags to ${imageTag} and ensure correct domain [ci skip]"
