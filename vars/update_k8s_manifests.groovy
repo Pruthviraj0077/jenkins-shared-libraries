@@ -40,7 +40,7 @@ def call(Map config = [:]) {
             
             # Check for changes
             if git diff --quiet; then
-                #echo "No changes to commit"
+                echo "No changes to commit"
             else
                 # Commit and push changes
                 git add ${manifestsPath}/*.yaml
