@@ -37,7 +37,9 @@ def call(Map config = [:]) {
             if [ -f "${manifestsPath}/10-ingress.yaml" ]; then
                 sed -i "s|host: .*|host: easyshop.letsdeployit.com|g" ${manifestsPath}/10-ingress.yaml
             fi
-            
+
+            git status
+            git diff
             # Check for changes
             if git diff --quiet; then
                 echo "No changes to commit"
